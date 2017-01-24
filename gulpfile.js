@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 		sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function(){
-	return gulp.src('./source/scss/*.scss')
+	return gulp.src('./src/scss/*.scss')
 		// find all .scss files from the css folder
 		.pipe(sourcemaps.init())
 		//run Sass on those files
@@ -23,7 +23,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('build-js', function(){
-	gulp.src('./source/javascript/*.js')
+	gulp.src('./src/javascript/*.js')
 		.pipe(sourcemaps.init())
 		.pipe(concat('bundle.js'))
 		.pipe(gulp.dest('./public/assets/javascript'))
@@ -34,11 +34,11 @@ gulp.task('build-js', function(){
 
 gulp.task('watch', function(){
 		//Watch the input folder for change and run sass task when something happens
-		gulp.watch('source/scss/*.scss', ['sass'])
+		gulp.watch('src/scss/*.scss', ['sass'])
 		.on('change', function(evt) {
 		    console.log(evt.type, " ==> ", evt.path);
 		});
-		gulp.watch('sources/javascript/*.js', ['build-js'])
+		gulp.watch('src/javascript/*.js', ['build-js'])
 		.on('change', function(evt) {
 		    console.log(evt.type, " ==> ", evt.path);
 		});
