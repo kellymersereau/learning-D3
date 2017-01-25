@@ -9,7 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.16.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
     "gulp": "^3.9.1",
+    "mongodb": "^2.2.22",
     "twitter": "^1.7.0"
   },
   "devDependencies": {
@@ -19,6 +24,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "nodemon": "^1.11.0"
   }
 }
